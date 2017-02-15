@@ -1,7 +1,7 @@
 {
   "name": "NodeAuth",
   "version": "1.0.0",
-  "description": "Lightweight Node Authentication System using LowDB",
+  "description": "Lightweight Node.js Authentication System using LowDB, Express and Handlebars.",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.16.1",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/leemahoney3/nodeauth/"
+    "url": "http://github.com/leemahoney3/NodeAuth/"
   },
   "keywords": [
     "nodejs",

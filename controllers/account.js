@@ -9,7 +9,7 @@ const account = {
 
   editAccount(request, response) {
 
-    const user = auth.getUser(request.session.email);
+    const user = auth.getUser(request.session.id);
 
     if (user) {
 
@@ -18,7 +18,7 @@ const account = {
     } else {
 
       response.redirect('/');
-      
+
     }
 
 
@@ -26,7 +26,7 @@ const account = {
 
   postEditAccount(request, response) {
 
-    const user = auth.getUser(request.session.email);
+    const user = auth.getUser(request.session.id);
 
     const data = {
       firstName: request.body.firstName,
@@ -46,7 +46,7 @@ const account = {
 
     } else {
 
-      auth.updateUser(data.email, data);
+      auth.updateUser(user.id, data);
       error = '';
       success = true;
 

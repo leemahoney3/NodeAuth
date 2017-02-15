@@ -10,7 +10,7 @@ const authController = {
 
   signIn(request, response) {
 
-    const user = auth.getUser(request.session.email);
+    const user = auth.getUser(request.session.id);
 
     if (user) {
 
@@ -47,7 +47,9 @@ const authController = {
 
     } else {
 
-      request.session.email = email;
+      const user = auth.getUserByEmail(email);
+
+      request.session.id = user.id;
       response.redirect('/');
 
     }
@@ -56,7 +58,7 @@ const authController = {
 
   signUp(request, response) {
 
-    const user = auth.getUser(request.session.email);
+    const user = auth.getUser(request.session.id);
 
     if (user) {
 

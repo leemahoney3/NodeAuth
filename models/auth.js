@@ -9,7 +9,14 @@ const auth = {
   database: new Database('./data/database.json', { users: [] }),
   collection: 'users', // Collection is basically same as table name in MySQL Database.
 
-  getUser(email) {
+  getUser(id) {
+
+    const result = this.database.findOneBy(this.collection, { 'id': id });
+    return result[0];
+
+  },
+
+  getUserByEmail(email) {
 
     const result = this.database.findOneBy(this.collection, { 'email': email });
     return result[0];
@@ -32,14 +39,16 @@ const auth = {
 
   checkPassword(email, password) {
 
-    const hashedPassword = this.getUser(email).password;
+    const hashedPassword = this.getUserByEmail(email).password;
     return passwordHash.verify(password, hashedPassword);
 
   },
 
-  updateUser(email, data) {
+  updateUser(id, data) {
 
-    this.database.update(this.collection, { email: email }, data);
+    //const user = this.getUser(email);
+
+    this.database.update(this.collection, { 'id': id }, data);
 
   }
 

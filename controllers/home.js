@@ -6,7 +6,7 @@ const homeController = {
 
   index(request, response) {
 
-    const user = auth.getUser(request.session.email);
+    const user = auth.getUser(request.session.id);
 
     response.render('home', { user: user });
 
