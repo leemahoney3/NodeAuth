@@ -1,0 +1,31 @@
+{
+  "name": "NodeAuth",
+  "version": "1.0.0",
+  "description": "Lightweight Node Authentication System using LowDB",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "client-sessions": "^0.7.0",
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "lowdb": "^0.15.4",
+    "password-hash": "^1.2.2",
+    "path": "^0.12.7",
+    "shortid": "^2.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/leemahoney3/nodeauth/"
+  },
+  "keywords": [
+    "nodejs",
+    "auth",
+    "lowdb"
+  ],
+  "author": "Lee Mahoney",
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{{> menu id="home" }}
+
+<div class="ui segment">
+  <h1>Welcome to NodeAuth!</h1>
+  <div class="ui divider"></div>
+
+  {{#if user}}
+  <p>Hello there, {{ user.firstName }}! How are you today?</p>
+  {{else}}
+  <p>Welcome Guest! Please Sign in or Sign up!</p>
+  {{/if}}
+</div>

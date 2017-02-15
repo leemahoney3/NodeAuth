@@ -1,0 +1,19 @@
+<nav class="ui menu">
+  <header class="ui header item">
+    <a href="/">NodeAuth</a>
+  </header>
+  <a href="/" id="home" class="item">Home</a>
+  <div class="right menu">
+    {{#if user}}
+      <a href="/account/edit/" id="editaccount" class="item">Edit Account</a>
+      <a href="/auth/signout/" id="signout" class="item">Sign Out</a>
+    {{else}}
+      <a href="/auth/signin/" id="signin" class="item">Sign In</a>
+      <a href="/auth/signup/" id="signup" class="item">Sign Up</a>
+    {{/if}}
+  </div>
+</nav>
+
+<script>
+  $('#{{id}}').addClass('active item');
+</script>
