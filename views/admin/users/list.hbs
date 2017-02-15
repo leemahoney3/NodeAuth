@@ -1,0 +1,40 @@
+{{> menu}}
+
+<div class="ui segment">
+  <h2>Registered Users</h2>
+  <div class="ui divider"></div>
+
+  <p>Below is a list of currently registered users on your app.</p>
+
+  <table class="ui center aligned celled table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Administrator</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each userList}}
+        <tr>
+          <td>{{ id }}</td>
+          <td>{{ firstName }}</td>
+          <td>{{ lastName }}</td>
+          <td>{{ email }}</td>
+          {{#if isAdmin}}
+            <td><div class="ui green horizontal label">Yes</div></td>
+          {{else}}
+            <td><div class="ui red horizontal label">No</div></td>
+          {{/if}}
+          <td>
+            <a href="/admin/users/edit/{{ id }}/" class="ui icon button"><i class="icon write"></i></a>
+            <a href="/admin/users/delete/{{ id }}/" class="ui icon button" onClick="return confirmDelete();"><i class="icon trash"></i></a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
