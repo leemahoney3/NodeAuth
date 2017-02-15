@@ -8,7 +8,7 @@ Lightweight Node.js Authentication System using LowDB, Express and Handlebars.
 2. Using Terminal or equivalent, enter the following commands inside that folder:
 
 ```bash
-npm init
+npm install
 ```
 
 Then
@@ -27,11 +27,17 @@ _Hint: Please do not use the ```node``` command, this application needs constant
 
 <br />
 
-**Initial Admin Account Information**
+You can then navigate to the following URL
 
 ```bash
-Email: admin@admin.com
-Password: admin
+http://localhost:8080
 ```
+
+And sign in with the default admin account
+
+**Email:** ```admin@admin.com```
+
+**Password:** ```admin```
+
 
 _Licensed under the ISC License._
