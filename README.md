@@ -14,8 +14,17 @@ npm init
 Then
 
 ```bash
-sudo node app.js
+sudo npm install -g nodemon
 ```
+
+Finally
+
+```bash
+sudo nodemon app.js
+```
+
+_Hint: Please do not use the ```node``` command, this application needs constant refresh when a user signs up, nodemon does that for you._
+
 <br />
 
 **Initial Admin Account Information**

@@ -23,6 +23,7 @@ const adminController = {
   listUsers(request, response) {
 
     const user      = auth.getUser(request.session.id);
+
     const userList  = admin.getAllUsers();
 
     if (user.isAdmin) {

@@ -1,6 +1,6 @@
 {
   "name": "NodeAuth",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Lightweight Node.js Authentication System using LowDB, Express and Handlebars.",
   "main": "app.js",
   "dependencies": {
