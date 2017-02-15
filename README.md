@@ -18,6 +18,6 @@ sudo node app.js
 ```
 <br />
 
-Documentation to be written. Code is pretty minimal and self explainitory.
+Documentation to be written. Code is pretty minimal and self explanatory.
 
 _Licensed under the ISC License._
