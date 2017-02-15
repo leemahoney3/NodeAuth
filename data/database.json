@@ -1,3 +1,12 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "B1QDxefFx",
+      "isAdmin": true,
+      "firstName": "Admin",
+      "lastName": "Admin",
+      "email": "admin@admin.com",
+      "password": "$2a$10$Zs2UXer5/8qBO2bsu41nmezD.gy/DrdH.JNTl8Chn9OxinnI..gSy"
+    }
+  ]
 }

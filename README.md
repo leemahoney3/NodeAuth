@@ -18,6 +18,11 @@ sudo node app.js
 ```
 <br />
 
-Documentation to be written. Code is pretty minimal and self explanatory.
+**Initial Admin Account Information**
+
+```bash
+Email: admin@admin.com
+Password: admin
+```
 
 _Licensed under the ISC License._

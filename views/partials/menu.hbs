@@ -1,10 +1,27 @@
 <nav class="ui menu">
   <header class="ui header item">
-    <a href="/">NodeAuth</a>
+    <a href="/"><i class="icon lock"></i> NodeAuth</a>
   </header>
   <a href="/" id="home" class="item">Home</a>
   <div class="right menu">
     {{#if user}}
+
+      {{# if user.isAdmin }}
+      <div class="ui pointing dropdown link item">
+        <span class="text">Admin Area</span>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="header">General</div>
+          <div class="divider"></div>
+            <a href="/admin/" class="item">Home</a>
+            <div class="divider"></div>
+            <div class="header">Users</div>
+            <div class="divider"></div>
+              <a href="/admin/users/" class="item">List Users</a>
+        </div>
+      </div>
+      {{/if}}
+
       <a href="/account/edit/" id="editaccount" class="item">Edit Account</a>
       <a href="/auth/signout/" id="signout" class="item">Sign Out</a>
     {{else}}

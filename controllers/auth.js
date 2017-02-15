@@ -76,6 +76,7 @@ const authController = {
 
     let data = {
       id: shortid.generate(),
+      isAdmin: false,
       firstName: request.body.firstName,
       lastName: request.body.lastName,
       email: request.body.email,

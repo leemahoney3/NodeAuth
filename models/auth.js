@@ -1,6 +1,6 @@
 'use strict';
 
-const passwordHash  = require('password-hash');
+const bcrypt  = require('bcrypt');
 
 const Database = require('./database');
 
@@ -25,7 +25,7 @@ const auth = {
 
   signUp(data) {
 
-    data.password = passwordHash.generate(data.password);
+    data.password = bcrypt.hashSync(data.password, 10);
     this.database.add(this.collection, data);
 
   },
@@ -40,7 +40,7 @@ const auth = {
   checkPassword(email, password) {
 
     const hashedPassword = this.getUserByEmail(email).password;
-    return passwordHash.verify(password, hashedPassword);
+    return bcrypt.compareSync(password, hashedPassword);
 
   },
 
